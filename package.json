@@ -1,10 +1,16 @@
 {
-  "name": "figmaproject",
+  "name": "pro-finsweet-hirad",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "tailwind": "npx tailwindcss -i ./tailwind/tailwind.css -o ./css/blogTailwind.css --watch"
+    "tailwind": "npx tailwindcss -i ./tailwind/tailwind.css -o ./css/blogTailwind.css --watch" ,
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "clean": "rm dist/bundle.js", 
+    "start": "react-scripts start", 
+    "build-prod": "parcel build src/index.html" 
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
