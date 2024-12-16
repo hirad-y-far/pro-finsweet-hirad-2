@@ -3,23 +3,28 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "tailwind": "npx tailwindcss -i ./tailwind/tailwind.css -o ./css/blogTailwind.css --watch" ,
+    "tailwind": "npx tailwindcss -i ./tailwind/tailwind.css -o ./css/blogTailwind.css --watch",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "clean": "rm dist/bundle.js", 
-    "start": "react-scripts start", 
-    "build-prod": "parcel build src/index.html" 
+    "clean": "rm dist/bundle.js",
+    "start": "react-scripts start",
+    "build-prod": "parcel build src/index.html",
+    "dev": "webpack --config=Scripts/config/webpack.dev.js --watch",
+    "build": "webpack --config=Scripts/config/webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.2",
-    "swiper": "^11.0.5"
+    "swiper": "^11.0.5",
+    "webpack": "^5.97.1"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.1"
+    "html-webpack-plugin": "^5.6.3",
+    "tailwindcss": "^3.4.1",
+    "webpack-cli": "^5.1.4"
   },
   "description": ""
 }
